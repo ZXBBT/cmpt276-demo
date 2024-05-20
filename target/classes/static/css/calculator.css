@@ -20,6 +20,10 @@ th {
     background-color: #D3D3D3;
 }
 
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 /* .input-left-half {
     float: left;
@@ -39,9 +43,9 @@ th {
 /* .text-style {} */
 
 .result-container {
-    position: flex;
-    left: 10px;
-    bottom: 20px;
+    position: relative;
+    /* left: 10px;
+    bottom: 20px; */
 }
 
 .button-container {
@@ -51,9 +55,9 @@ th {
 }
 
 .button-container-addrow {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
+    position: relative;
+    /* left: 10px;
+    bottom: 10px; */
 }
 
 .button-weight-mean {
@@ -70,49 +74,70 @@ th {
 }
 
 .button-container-weight-mean {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+    position: relative;
+    margin-left: 75%;
+    /* right: 10px;
+    bottom: 10px; */
     /* display: flex; */
     /* gap: 10px;
     margin-bottom: 50%; */
 }
 
-.container1 {
-    background-color: #A6192E;
-    /* Red background */
-    height: 60vh;
+
+/* .container1 {
+    background-color: #3D3935;
+    /* background-color: #A6192E; */
+
+
+/* Red background */
+
+
+/* height: 60vh;
     display: flex;
     justify-content: center;
-    align-items: left;
-}
+    align-items: left; } 
+    */
 
 .container2 {
+    position: relative;
     background-color: #3D3935;
     /* Gray background */
-    height: 50vh;
-    width: 80%;
+    height: 530px;
+    width: 90%;
+    margin-left: 5%;
+    /* margin-top: 10%; */
+    margin-top: -10px;
+    /*
     padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    color: white;
+    box-sizing: border-box; */
+    /* border-radius: 10px; */
+    /* color: white; */
     /* White text color for contrast */
-    display: absolute;
+    /* display: absolute;
     justify-content: left;
     align-items: left;
-    margin-top: 0;
+    margin-top: 0; */
     /* Ensure top margin is explicitly set to 0 */
 }
 
 .container3 {
+    position: relative;
     background-color: white;
-    /* White background */
-    padding: 20px;
-    border-radius: 10px;
     color: black;
+    box-sizing: border-box;
+    padding: 20px;
+    /* height: 100%; */
+    margin-top: -510px;
+    width: 90%;
+    margin-left: 5%;
+    /* z-index: +1; */
+    /* margin: 50px; */
+    /* White background */
+    /* padding: 20px; */
+    /* border-radius: 10px; */
     /* Black text color for readability */
-    width: 100%;
-    margin-left: 0px;
+    /* width: 100%;
+    margin-left: 0px; */
     /* Adjust margin if needed */
 }
 
@@ -120,6 +145,8 @@ th {
     position: relative;
     background-color: #E9EFF1;
     /* Light Gray background */
+    box-sizing: border-box;
+    padding: 10px;
     color: black;
     /* Black text color for readability */
     width: 100%;
