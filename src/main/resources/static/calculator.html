@@ -28,38 +28,41 @@
                     Give grades to the numeric activities
                 </h3>
             </h2>
+            <!-- <table id="myTable"> -->
             <table id="myTable">
                 <thead>
                     <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                        <th>Column 3</th>
-                        <th>Column 4</th>
-                        <th>Column 5</th>
+                        <th>Name</th>
+                        <th>Short Name</th>
+                        <th>Weight</th>
+                        <th>Grade</th>
+                        <th>Precent</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Row 1, Col 1</td>
-                        <td>Row 1, Col 2</td>
-                        <td><input type="text" size="5"></td>
+                        <td>Activity 1</td>
+                        <td>A1</td>
+                        <td><input class="weight" id="inputWeight1" type="number" step="1" min="0"></td>
                         <td>
-                            <div class="input-container">
-                                <input type="text" size="5">/<input type="text" size="5">
+                            <div>
+                                <input class="grade" id="inputGrade1" type="number" step="0.1" min="0"> /
+                                <input class="total" id="inputTotal1" type="number" step="0.1" min="0">
                             </div>
                         </td>
-                        <td>Row 1, Col 5</td>
+                        <td id="precent1"></td>
                     </tr>
                     <tr>
-                        <td>Row 2, Col 1</td>
-                        <td>Row 2, Col 2</td>
-                        <td><input type="text" size="5"></td>
+                        <td>Activity 2</td>
+                        <td>A2</td>
+                        <td><input class="weight" id="inputWeight2" type="number" step="1" min="0"></td>
                         <td>
-                            <div class="input-container">
-                                <input type="text" size="5">/<input type="text" size="5">
+                            <div>
+                                <input class="grade" id="inputGrade2" type="number" step="0.1" min="0"> /
+                                <input class="total" id="inputTotal2" type="number" step="0.1" min="0">
                             </div>
                         </td>
-                        <td>Row 2, Col 5</td>
+                        <td id="precent2"></td>
                     </tr>
                 </tbody>
             </table>
@@ -71,11 +74,12 @@
                 <h3>
                     <label class="result">Result</label>
                 </h3>
+                <div id="resultText"></div>
 
             </div>
             <div class="button-container-weight-mean">
-                <button class="button-weight-mean" onclick="addRow()">WEIGHTED</button>
-                <button class="button-weight-mean" onclick="addRow()">MEAN</button>
+                <button class="button-weight-mean" onclick="calculateWeighted()">WEIGHTED</button>
+                <button class="button-weight-mean" onclick="calculateMean()">MEAN</button>
             </div>
         </div>
     </div>

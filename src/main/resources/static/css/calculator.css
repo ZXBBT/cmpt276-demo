@@ -3,10 +3,15 @@ body {
 }
 
 table {
-    width: 100%;
+    width: 70%;
     border: 1px solid #A9A9A9;
     border-collapse: collapse;
+    table-layout: fixed;
     /* Ensure the outer border of the table is visible */
+    /* width: 100%;
+    border: 1px solid #A9A9A9;
+    border-collapse: collapse;
+    table-layout: fixed; */
 }
 
 th,
@@ -35,8 +40,21 @@ h1 {
     width: 45%;
 } */
 
-.input-container {
+
+/* .input-container {
     display: flex;
+} */
+
+.weight {
+    width: 40px;
+}
+
+.grade {
+    width: 40px;
+}
+
+.total {
+    width: 40px;
 }
 
 
@@ -48,23 +66,13 @@ h1 {
     bottom: 20px; */
 }
 
-.button-container {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-}
-
 .button-container-addrow {
     position: relative;
-    /* left: 10px;
-    bottom: 10px; */
 }
 
 .button-weight-mean {
-    /* position: absolute;
-    right: 10px;
-    bottom: 10px; */
-    padding: 10px 20px;
+    width: 100px;
+    padding: 6px 1px;
     font-size: 16px;
     cursor: pointer;
     background-color: #A6192E;
@@ -75,7 +83,9 @@ h1 {
 
 .button-container-weight-mean {
     position: relative;
-    margin-left: 75%;
+    margin-left: 73%;
+    /* position: relative;
+    margin-left: 75%; */
     /* right: 10px;
     bottom: 10px; */
     /* display: flex; */
@@ -142,6 +152,7 @@ h1 {
 }
 
 .container4 {
+    width: 80%;
     position: relative;
     background-color: #E9EFF1;
     /* Light Gray background */
@@ -149,6 +160,11 @@ h1 {
     padding: 10px;
     color: black;
     /* Black text color for readability */
-    width: 100%;
-    /* Adjust width as needed */
+    /* width: 100%;
+    position: relative;
+    background-color: #E9EFF1;
+    box-sizing: border-box;
+    padding: 10px;
+    color: black;
+    width: 80%; */
 }
