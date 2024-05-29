@@ -52,20 +52,32 @@ var totalGrade = 0;
 
 function calculateWeighted() {
     // when rol less than 3
+    var precent = "NONE";
+    var result = "NONE";
     for (var i = 1; i <= trackRowNum; i++) {
         var currentWeight = document.getElementById('inputWeight' + i).value;
         var currentGrade = document.getElementById('inputGrade' + i).value;
         var currentTotal = document.getElementById('inputTotal' + i).value;
-        var precent = currentGrade / currentTotal;
+        precent = currentGrade / currentTotal;
+        if (currentGrade == "" || currentTotal == "" || currentWeight == "") {
+            // console.log("in if");
+            precent = "";
+            document.getElementById('precent' + i).textContent = precent.toString();
+            // result = "NONE"
+            continue;
+        }
         totalGrade += currentGrade / currentTotal * currentWeight;
         totalWeight = +totalWeight + +currentWeight;
         document.getElementById('precent' + i).textContent = precent.toFixed(4);
     }
     var result = totalGrade / totalWeight;
-    // console.log(totalGrade);
+    // console.log(result);
+    if (totalWeight == 0)
+        document.getElementById('resultText').textContent = "Please enter at least one Activity";
+    else
     // console.log(totalWeight);
     // console.log(totalGrade / totalWeight);
-    document.getElementById('resultText').textContent = `Weighted Result: ${result.toFixed(4)}%`;
+        document.getElementById('resultText').textContent = `Weighted Result: ${result.toFixed(4)}%`;
 
 
     // console.log(currentWeight.nodeValue);
@@ -74,20 +86,34 @@ function calculateWeighted() {
 }
 
 function calculateMean() {
+    var precent = "NONE";
+    var result = "NONE";
+    var countingNum = 0;
     for (var i = 1; i <= trackRowNum; i++) {
         // var currentWeight = document.getElementById('inputWeight' + i).value;
         var currentGrade = document.getElementById('inputGrade' + i).value;
         var currentTotal = document.getElementById('inputTotal' + i).value;
-        var precent = currentGrade / currentTotal;
+        precent = currentGrade / currentTotal;
+        if (currentGrade == "" || currentTotal == "") {
+            precent = "";
+            document.getElementById('precent' + i).textContent = precent.toString();
+            // result = "NONE"
+            continue;
+        }
         totalGrade = +totalGrade + +precent;
         // totalWeight = +totalWeight + +currentWeight;
         document.getElementById('precent' + i).textContent = precent.toFixed(4);
+        countingNum++;
     }
-    var result = totalGrade / trackRowNum;
-    // console.log(totalGrade);
+    // result = totalGrade / trackRowNum;
+    result = totalGrade / countingNum;
+    // console.log(countingNum);
     // console.log(totalWeight);
     // console.log(trackRowNum);
-    document.getElementById('resultText').textContent = `Mean Result: ${result.toFixed(4)}%`;
+    if (countingNum == 0)
+        document.getElementById('resultText').textContent = "Please enter at least one Activity";
+    else
+        document.getElementById('resultText').textContent = `Mean Result: ${result.toFixed(4)}%`;
 
     totalWeight = 0;
     totalGrade = 0;
